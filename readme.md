@@ -28,8 +28,8 @@ You must complete the following tasks before submitting the assessment:
 ### How to play
 > ❗️Ensure you include the following:
 - [x] Quick overview
-- [ ] Objectives and rules
-- [ ] Game play
+- [x] Objectives and rules
+- [x] Game play
 
 #### Overview 
 **Guess-My-Word** is a command line clone of the popular word guessing game [Wordle](https://www.nytimes.com/games/wordle/index.html). Players are given six tries to guess a five-letter word. After each attempt, the program gives clues about the accuracy of the guess. The player uses the clues to adapt their responses.
@@ -46,9 +46,16 @@ The game ends when the correct word is guessed (win) or when the number of attem
 > 4. If the letter is correct but the position is wrong, it will output 'O'
 > 5. An incorrect letter will output '_'
 > 6. Letters can be used multiple times for different guesses
+> 7. The word of the day changes everyday. The user effectively has a 24h time limit
 
 #### Game play
 > ❗️Provide clear instructions on how game play proceeds
+> 1. Users will be told they have 6 attempts to guess the word of the day
+> 2. The word of the day will be secretly selected
+> 3. The user guesses a valid English word
+> 4. X, O or _ will be displayed where appropriate
+> 5. Game ends when the word of the day is guessed or attempts reach 6
+> 6. Display final score
 
 
 ## Developer Documentation
