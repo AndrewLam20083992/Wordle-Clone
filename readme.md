@@ -10,8 +10,8 @@
 ## ❗️ Tasks
 You must complete the following tasks before submitting the assessment:
 - [x] Read through the project requirements in the project Word document on Blackboard
-- [ ] Read through this document in its entirety
-- [ ] Ensure you understand that you **must** keep a journal of your development progress in the Word document
+- [x] Read through this document in its entirety
+- [x] Ensure you understand that you **must** keep a journal of your development progress in the Word document
 - [ ] Produce a plan for developing your code
 - [ ] Complete all sections in this document marked with ❗️
 - [ ] Complete the [code](#flow) according to the specification and ensure it passes the bundled test cases and at least one other test case you yourself developed
