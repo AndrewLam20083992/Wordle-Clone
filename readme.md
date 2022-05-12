@@ -71,6 +71,7 @@ The program must do the following:
 #### Flowchart
 > ❗️Include a flowchart (as `png`, `svg`, or `mermaid`) that describes the program flow.
 > **Tip**: if you are not comfortable with markdown, you can use https://app.diagrams.net/ 
+> 
 > ![Flowchart](thumbnail_Final Wordle Flowchart.jpg)
 
 ### ❗️ Optional features
