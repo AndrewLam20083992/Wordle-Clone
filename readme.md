@@ -40,6 +40,12 @@ The game ends when the correct word is guessed (win) or when the number of attem
 
 #### Objectives and rules
 > ❗️Complete the user instructions for the game
+> 1. User has to guess the word of the day in 6 attempts or less
+> 2. Only valid English words can be guessed (guesses should be words in the word bank)
+> 3. If the letter and position is correct, it will output 'X'
+> 4. If the letter is correct but the position is wrong, it will output 'O'
+> 5. An incorrect letter will output '_'
+> 6. Letters can be used multiple times for different guesses
 
 #### Game play
 > ❗️Provide clear instructions on how game play proceeds
