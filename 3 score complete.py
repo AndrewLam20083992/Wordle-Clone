@@ -66,10 +66,6 @@ for value, letter in enumerate(guess):
                 output += (0, )
             elif len(target) == 1 and len(source) == 2 and source[0] == str(value):
                 output += (1, )
-            elif source[0] == str(value):
-                output += (1, )
-            elif len(target) == 1 and len(source) == 2:
-                output += (1, )
             else:
                 output += (0, )
     else:
