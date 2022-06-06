@@ -55,21 +55,21 @@ for value, letter in enumerate(guess):
         source = source.split(" ")
 
         if str(value) in target:
-            output += (2, )
+            output += (2,)
 
         else:
             if len(target) == 1 and len(source) == 1: 
-               output += (1, )
+               output += (1,)
             elif len(target) == 2 and len(source) == 2:
-                output += (1, )
+                output += (1,)
             elif len(target) == 1 and len(source) == 2 and source[0] == str(value) and target[0] == source[1] :
-                output += (0, )
+                output += (0,)
             elif len(target) == 1 and len(source) == 2 and source[0] == str(value):
-                output += (1, )
+                output += (1,)
             else:
-                output += (0, )
+                output += (0,)
     else:
-        output += (0, )
+        output += (0,)
 
 print(output)        
     
