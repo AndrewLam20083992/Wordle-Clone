@@ -148,7 +148,7 @@ flowchart LR
 
 #### Algorithm specification 
 > ❗️ Describe the scoring algorithm using *pseudocode*, Python, flowcharts, or some combination of these. 
-> 
+> ![Scoring Algorithm](scoringalg.jpg)
 > Your algorithm must clearly and unambiguously describe how to arrive at the scores above and any other valid inputs.
 <br>
 ```python
