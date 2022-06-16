@@ -12,14 +12,14 @@ You must complete the following tasks before submitting the assessment:
 - [x] Read through the project requirements in the project Word document on Blackboard
 - [x] Read through this document in its entirety
 - [x] Ensure you understand that you **must** keep a journal of your development progress in the Word document
-- [ ] Produce a plan for developing your code
-- [ ] Complete all sections in this document marked with ❗️
-- [ ] Complete the [code](#flow) according to the specification and ensure it passes the bundled test cases and at least one other test case you yourself developed
-- [ ] Submit a `zip` file containing:
-  - [ ]  the completed Word document (journal)
-  - [ ]  this `readme.md` with the appropriate sections filled in
-  - [ ]  a working version of your game, written in Python
-  - [ ]  any and all supporting files required to run your program
+- [x] Produce a plan for developing your code
+- [x] Complete all sections in this document marked with ❗️
+- [x] Complete the [code](#flow) according to the specification and ensure it passes the bundled test cases and at least one other test case you yourself developed
+- [x] Submit a `zip` file containing:
+  - [x]  the completed Word document (journal)
+  - [x]  this `readme.md` with the appropriate sections filled in
+  - [x]  a working version of your game, written in Python
+  - [x]  any and all supporting files required to run your program
 
 
 ## User Documentation
@@ -150,71 +150,9 @@ flowchart LR
 > ❗️ Describe the scoring algorithm using *pseudocode*, Python, flowcharts, or some combination of these. 
 > ![Scoring Algorithm](scoringalg.jpg)
 > Your algorithm must clearly and unambiguously describe how to arrive at the scores above and any other valid inputs.
-<br>
-```python
-################################################
-# EXAMPLE ONLY: DELETE AND WRITE YOUR OWN      #
-################################################
-# 1. Split characters in guess into a list
-# 2. Split characters in word into a list
-# 3. Do something for each character in the guess
-# 4. Do something else for each character in the guess
-# 5. Score each character according to this flowchart:
-# <flowchart>
-```
->Example flowchart (**SAMPLE ONLY**):
-```mermaid
-flowchart TD
-    start([start])
-    input[/guess:target_word/]
-    isInWord{Is char in target?}
-    isExactPosition{Is char in correct position}
-    outMiss([miss: 0])
-    outExact([exact: 2])
-    tbd[[<em>develop your algorithm</em>]]
-    start -->|get guess, target| input
-    input --> |for each char in guess| isInWord
-    isInWord --> | No | outMiss
-    isInWord --> | Yes | isExactPosition
-    isExactPosition --> | Yes | outExact
-    isExactPosition --> | <b>No</b> | tbd
-```
-
 
 ## Delivery roadmap
 The following is a proposed roadmap for delivering the working prototype. You can use this chart or create your own:
-```mermaid
-gantt
-    dateFormat  YYYY-MM-DD
-    title       Possible Delivery Roadmap
-    excludes    weekends
-
-    section Analysis
-    Project review          :a1, 2022-04-18, 1w
-    Competitors             :a2, after a1, 1w
-    Algorithm development   :a3, after a1, 3w 
-    UX Design               :after a2, 2w
-    Design sign off         :milestone,
-
-    section Development
-    Coding standards        :done, d0, 1d
-    Review existing code    :d1, 2022-04-18, 1w
-    Code Score Algorithm        :crit, d2, after a2, 3w
-    Prototype User Interaction :d3, after d2, 1w
-    Iterative development: d4, after d3, 4w
-    MVP complete        :milestone, dm, after d4, 0d
-    Valued add features :dv, after dm, 2w
-
-    section Documentation
-    Draft user documentation: active, u1, 2022-04-18, 3w
-    Finalise documentation: u2, after dm, 2w
-
-    section Testing
-    Write test cases :t1, after u1, 1w
-    All tests pass :milestone, after u2,
-
-
-```
 
 ###### Note:
 - Modern development is iterative, flexible, and client-centered
