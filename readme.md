@@ -93,6 +93,8 @@ You **must** implement at least **one** of the following *optional* features and
 - Track the history of target words and guesses in a file, including summary statistics (win rate, avg. number of guesses)
 - Track all characters not in word and display to users
 - Other? <br>If you have any other features you can propose them to your lecturer 
+- 
+Chosen optional feature: Personalised Welcome message and gameover line
 
 ### Scoring guesses {#scoring}
 At the core of **Guess-My-Word** is the scoring **algorithm**. The scoring algorithm takes a 5-character sequence of letters (the ***guess***) and compares it to another 5-character sequence of letters (the ***target***) and scores each character in the guess:
