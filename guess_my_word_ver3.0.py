@@ -26,6 +26,8 @@ EXACT = 2  # X, +: right letter, right place 🟩
 
 MAX_ATTEMPTS = 6
 WORD_LENGTH = 5
+target_word = ""
+guess = ""
 
 import random
 
@@ -53,11 +55,13 @@ def play():
 
     #welcome()
     while count < 7:
-    
+        print("in while", target_word)
         guess = ask_for_guess(valid_words)
-        score = score_guess(guess, target_word)
+        print(guess, target_word)
+        score = score_guess()
+        print(score)
         print("Here's what you got right!")
-        print(format_score(guess, score))
+        print(format_score(score))
         if is_correct(score):
             print("Congratulations! You've won!")
         else:
@@ -73,7 +77,7 @@ def play():
         print("Game over! You lose..")
         
 
-def is_correct(score):
+def is_correct():
     """Checks if the player's guess is fully correct"""
     if score == (2,2,2,2,2):
         return True
@@ -83,41 +87,48 @@ def is_correct(score):
 
 def get_valid_words():
     """Converts all_words.txt into a list"""
-    file = open('all_words.txt', 'r')
-    valid_words = list()
+    filer = open('all_words.txt', 'r')
+    valid_words = []
 
-    for line in file:
-        line_strip = line.strip()
-        line_split = line_strip.split()
-        valid_words.append(line_split)
+    for line in filer:
+        
+        line_strip = line.rstrip('\n')
+        line_split = str(line_strip.split())
+        valid_words.append(w)
+        print(valid_words)
     return valid_words
 
 def get_target_word():
     """Converts target_words.txt into a list"""
     file = open('target_words.txt', 'r')
-    target_word = list()
+    target_words = []
 
     for line in file:
         line_strip = line.strip()
         line_split = line_strip.split()
-        target_word.append(line_split)
+        target_words.append(line_split)
     
-    target_word = target_word[random.randint(0, len(target_word))]
-    return target_word
+    target_word = target_words[random.randint(0, len(target_words))]
+    return str(target_word)
 
 def ask_for_guess(valid_words):
     """Asks the player for a guess and identifies whether it's valid or not"""
     
-    guess = input("Please enter a guess: ").lower()
-
-    for word in valid_words:
-        if word == guess:
-            return guess
+    #guess = input("Please enter a guess: ").lower()
+    
+    while True:
+        guess = input("Please enter a guess: ").lower()
+        print(guess)
+        if guess not in valid_words:
+            print("not found")
+            
         else:
-            guess = input("Please enter a guess: ").lower()
+            return guess
+        
 
-def score_guess(guess, target_word):
 
+def score_guess():
+    print(guess, target_word)
     #Start of function
     score = [0,0,0,0,0]
     guess_dic = {}
@@ -138,6 +149,7 @@ def score_guess(guess, target_word):
         else:
             num = target_dic.get(value) + " " + str(count)
             target_dic[value] = (num)
+            
     #Start testing
     for value, letter in enumerate(guess):
         if letter in target_dic:
@@ -167,7 +179,7 @@ def score_guess(guess, target_word):
     return (score)
 
 
-def format_score(guess, score):
+def format_score(score):
     """Formats the score to be clear for the player to understand"""
     all_caps = guess.upper()
     print(all_caps[0] + " " +
